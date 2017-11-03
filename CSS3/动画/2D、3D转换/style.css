@@ -1,0 +1,54 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+}
+/* -webkit-transformsafari, chrome */
+/* -ms-transformIE */
+/* -o-transform Opera */
+/* -moz-transform FireFox */
+
+/* 移动 */
+/* .div2{
+    transform: translate(100px,200px);
+    -webkit-transform: translate(100px,200px); 
+    -ms-transform: translate(100px,200px); /
+    -o-transform: translate(100px,200px); 
+    -moz-transform: translate(100px,200px); 
+} */
+
+/* 旋转 */
+/* .div2{
+    transform: rotate(200deg);
+    -webkit-transform: retate(200deg); 
+    -ms-transform: rotate(200deg); 
+    -o-transform: rotate(200deg); 
+    -moz-transform: rotate(200deg);
+} */
+
+/* 缩放 */
+/* .div2{
+    transform: scale(1,2);
+    -webkit-transform: scale(1,2); 
+    -ms-transform: scale(1,2); 
+    -o-transform: scale(1,2); 
+    -moz-transform: scale(1,2); 
+} */
+
+/* 倾斜 */
+/* .div2{
+    transform:skew(50deg,50deg);
+    -webkit-transform: skew(50deg,50deg); 
+    -ms-transform: skew(50deg,50deg); 
+    -o-transform: skew(50deg,50deg); 
+    -moz-transform: skew(50deg,50deg); 
+} */
+
+/* 3D转换 */
+.div2{
+    transform:rotateX(120deg);
+    -webkit-transform: rotateX(120deg);
+    -ms-transform: rotateX(120deg);
+    -o-transform: rotateX(120deg); 
+    -moz-transform: rotateX(120deg); 
+}

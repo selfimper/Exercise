@@ -1,0 +1,23 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    position: relative;
+    /* 动画效果连续 */
+    animation: anim 5s infinite alternate;
+    -webkit-animation: anim 5s infinite alternate;
+}
+@keyframes anim{
+    0% {background: grey; left: 0px; top: 0px}
+    25% {background: green; left: 200px; top: 0px}
+    50% {background: orange; left: 200px; top: 200px}
+    75% {background: black; left: 0px; top: 200px}
+    100% {background: red; left: 0px; top: 0px}
+}
+@-webkit-keyframes anim{
+    0% {background: grey; left: 0px; top: 0px}
+    25% {background: green; left: 200px; top: 0px}
+    50% {background: orange; left: 200px; top: 200px}
+    75% {background: black; left: 0px; top: 200px}
+    100% {background: red; left: 0px; top: 0px}
+}
