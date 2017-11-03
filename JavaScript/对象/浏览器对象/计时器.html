@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ptime"></p>
+    <button onclick="myWin()">点击</button>
+    <script>
+        // var mytime = setInterval(function(){ //间隔指定的毫秒数不停地执行指定的代码
+        //     getTime();
+        // },1000);
+        // function getTime(){
+        //     var d = new Date();
+        //     var t = d.toLocaleTimeString();
+        //     document.getElementById("ptime").innerHTML = t;
+        // }
+        // function stopTime(){
+        //     clearInterval(mytime);//停止setInterval方法的执行
+        // }
+        var win;
+        function myWin(){
+            win = setTimeout(function(){
+                alert("hello");
+            },3000);                    //暂停指定的毫秒数后执行指定的代码
+        }
+        function stopWin(){
+            clearTimeout(Win);     //停止setTimeout方法的执行
+        }
+    </script>
+</body>
+</html>

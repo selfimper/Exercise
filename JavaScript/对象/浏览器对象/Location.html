@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="getLoc()">按钮</button>
+    <p id="pid"></p>
+    <script>
+        function getLoc(){
+            document.getElementById("pid").innerHTML = window.location.hostname;//返回web主机的域名
+            document.getElementById("pid").innerHTML = window.location.pathname;//返回当前页面的路径和文件名
+            document.getElementById("pid").innerHTML = window.location.port;//返回web主机的端口
+            document.getElementById("pid").innerHTML = window.location.protocol;//返回所使用的web协议
+            document.getElementById("pid").innerHTML = window.location.href;//返回当前页面的URL
+            location.assign("http://www.google.com");//加载新的文档            
+        }
+    </script>
+</body>
+</html>

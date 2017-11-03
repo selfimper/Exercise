@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn1">点击</button>
+    </div>
+    <!-- <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function(){alert("DOM 0级事件处理程序")};
+        // btn1.onclick = function(){alert("DOM 0级事件处理程序1")};//多个事件处理程序会被覆盖
+        // btn1.onclick = null;//清除事件
+    </script> -->
+
+<!--     
+    <script>
+        var btn1 = document.getElementById("btn1").addEventListener("click",function demo(){
+            alert("DOM 2级事件处理程序")
+        });
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click",demo1);
+        btn1.addEventListener("click",demo2);
+        btn1.addEventListener("click",demo3);
+        function demo1(){
+            alert("DOM 2级事件处理程序1")
+        }
+        function demo2(){
+            alert("DOM 2级事件处理程序2")
+        }
+        function demo3(){
+            alert("DOM 2级事件处理程序3")
+        }
+        // btn1.removeEventListener("click",demo1);//移除事件
+
+    // IE事件处理程序
+    // var btn1 = document.getElementById("btn1");
+    // if(btn1.addEventListener){
+    //     btn1.addEventListener("click",demo);
+    // }else if(btn1.attachEvent){
+    //     btn1.attachEvent("onclick",demo);
+    // }else{
+    //     btn1.onclick = demo();
+    // }
+    // function demo() {
+    //     alert("Hello");
+    // }
+    </script> -->
+    <br>
+    <a  id="aid" href="http://www.google.com">Google</a>
+    <script>
+        document.getElementById("btn1").addEventListener("click",showType);
+        document.getElementById("div").addEventListener("click",showDiv);
+        document.getElementById("aid").addEventListener("click",showA);
+        function showType(event) {
+            // alert(event.type);//获取事件类型
+            alert(event.target);//获取事件目标
+            event.stopPropagation();//阻止事件冒泡
+        }
+        function showDiv() {
+            alert("div");
+        }
+        function showA() {
+            // event.stopPropagation();
+            event.preventDefault();//阻止默认事件，不跳转google
+        }
+    </script>
+</body>
+</html>

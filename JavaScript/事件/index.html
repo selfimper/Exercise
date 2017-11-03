@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- 网页加载事件 -->
+<body onload="mgs()">
+    <!-- 鼠标经过移除事件 -->
+    <div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+    <script>
+        function onOver(ooj){
+            ooj.innerHTML = "Hello";
+        }
+        function onOut(ooj) {
+            ooj.innerHTML = "World";
+        }
+    </script>
+    <form>
+        <!-- 文本内容改变 -->
+        <input type="text" onchange="changeDemo(this)"> 
+        <!-- onchange="alert('内容改变了')" -->
+    </form>
+    <script>
+        function changeDemo(bg) {
+            alert("内容改变了");
+        }
+    </script>
+    <form>
+        <!-- 文本框选中事件,光标聚集事件 -->
+        <input type="text" onselect="selectDemo(this)" onfocus="changeDemo(this)">
+    </form>
+    <script>
+        function selectDemo(bg) {
+            bg.style.background="red";
+        }
+        function changeDemo(bg) {
+            bg.style.background="green";
+        }
+        function mgs() {
+            alert("网页内容加载完毕");
+        }
+    </script>
+</body>
+</html>

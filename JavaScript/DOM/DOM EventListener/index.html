@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            alert("hello")
+        });
+
+
+        var x = document.getElementById("btn");
+        x.addEventListener("click",hello); //句柄
+        x.addEventListener("click",world);
+
+        x.removeEventListener("click",hello);//移除句柄
+        function hello(){
+            alert("Hello");
+        }
+        function world(){
+            alert("World");
+        }
+    </script>
+</body>
+</html>

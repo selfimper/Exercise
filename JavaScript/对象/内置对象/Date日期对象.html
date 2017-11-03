@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="startTime()">
+    <script>
+        // var date = new Date();
+        // document.write(date);
+        // document.write(date.getFullYear());//获取年份
+        // document.write(date.getTime());//获取毫秒
+        // date.setFullYear(2017,8,11);
+        // document.write(date);//设置具体日期
+
+        //时钟
+        
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("timetxt").innerHTML = h+":"+m+":"+s;
+            t = setTimeout(function(){
+                startTime();
+            },1000);
+        }
+        function checkTime(i) {
+            if(i<10){
+                i = "0"+i;
+            }
+            return i;
+        }
+    </script>
+    <div id="timetxt"></div>
+</body>
+</html>

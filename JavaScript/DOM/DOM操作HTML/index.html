@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pid">Hello</p>
+    <button onclick="demo()">按钮</button>
+    <script>
+        function demo() {
+            var nv = document.getElementById("pid").innerHTML = "World";
+            // document.getElementsByTagName("p");//相同元素中的第一个
+        }
+    </script>
+    <br>
+    <br>
+    <!-- 点击按钮跳转到新的页面 -->
+    <a  id="aid" href="http://www.baidu.com">Hello</a>
+    <button onclick="demo()">点击</button>
+    <script>
+        function demo() {
+            document.getElementById("aid").href="http://www.google.com";
+        }
+    </script>
+        <!-- 点击按钮跳转到新的页面 -->
+        <img  id="imgid" src="1.jpg">
+        <button onclick="demo()">点击</button>
+        <script>
+            function demo() {
+                document.getElementById("imgid").src="2.jpg";
+            }
+        </script>
+</body>
+</html>
