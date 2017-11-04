@@ -1,0 +1,41 @@
+/* 消除前面的点 */
+ul,li{
+    list-style: none;
+}
+/* 消除缩进效果 */
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.main{
+    background-color: grey;
+    /* background-repeat: repeat-x; */
+    width: 100px;
+    margin-bottom: 1px;
+}
+
+li{
+    background-color: #eeeeee;
+}
+/* 消除下划线 */
+a{
+    text-decoration: none;
+    padding-left: 20px;
+    display: block;
+    width: 80px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.main a{
+    color: white;
+}
+
+.main li a{
+    color: black;
+}
+
+.main ul{
+    display: none;
+}
