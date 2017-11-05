@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let type = "quartz";
+        let color = "rose";
+        let carat = 21.29;
+
+        //未简写前
+        // const gemstone = {
+        //     type: type,
+        //     color: color,
+        //     carat: carat
+        // };
+
+
+        // //简写后
+        let gemstone = {type, color, carat};
+
+        console.log(gemstone);
+
+        // //cal: function(){...}可简写成 cal(){...}
+    </script>
+</body>
+</html>

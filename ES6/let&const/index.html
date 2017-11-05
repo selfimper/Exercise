@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //使用var时，所有变量都会被提升到函数作用域顶部，运行结果为 Undefined
+        // function getClothing(isCold){
+        //     if(isCold){
+        //         var freezing ='Grab a jacket.';
+        //     }else{
+        //         var hot = "It's a shorts kind of day.";
+        //         alert(freezing);
+        //     }
+        // }
+        // getClothing(false);
+
+
+        //freezing没有再else语句、函数作用域或全局作用域内声明， 所以为 ReferenceError：freezing is not defined
+        // function getClothing(isCold) {
+        //     if (isCold) {
+        //         const freezing = 'Grab a jacket!';
+        //     } else {
+        //         const hot = "It's a shorts kind of day.";
+        //         alert(freezing);
+        //     }
+        // }
+        // getClothing(false);
+
+
+        //使用let声明的变量可以重新赋值，但不能在同一作用域内重新声明
+        //使用const声明的变量必须赋初始值，但不能在同一作用域内重新声明，也无法重新赋值
+        let instructor = "james";
+        instructor = "richard";
+        alert(instructor);
+
+        //使用： 当打算为变量重新赋值时，用let ，否为用 const(声明变量最严格，建议使用)； 定义全局变量时用var（通常不合理）
+    </script>
+</body>
+</html>

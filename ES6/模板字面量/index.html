@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES6 之前，将字符串连接到一起的旧方法是使用字符串连接运算符 (+)
+        const student = {
+            name: 'Richard Kalehoff',
+            guardian: 'Mr. Kalehoff'
+        };
+        const teacher = {
+            name: 'Mrs. Wilson',
+            room: 'N231'
+        };
+        // let message = student.name + ' please see ' + teacher.name + ' in ' + teacher.room + ' to pick up your report card.';
+
+
+        //模板字面量用倒引号 ( `` )表示，可以包含用 ${expression} 表示的占位符. 模板字面量也将换行符当做字符串的一部分.
+        //模板字面量中的嵌入式表达式不仅仅可以用来引用变量,还可以在嵌入式表达式中进行运算、调用函数和使用循环.
+        let message = `${student.name} Please see ${teacher.name} in ${teacher.room} to pick up your report card.`;
+
+        alert(message);
+
+    </script>
+</body>
+</html>

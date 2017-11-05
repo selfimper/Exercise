@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //提取值 未用到解构
+        const point = [10, 25, -34];
+        const x = point[0];
+        const y = point[1];
+        const z = point[2];
+        console.log(x, y, z);
+
+
+        //解构    [ ] 表示被解构的数组
+        const point1 = [1,34,45];
+        const [a,b,c] = point1;
+        console.log(a,b,c);
+
+        //解构对象
+        const person = {
+            name: "Frank",
+            age: "23",
+            gender: "male"
+        };
+        const {name,gender,age} = person;
+        console.log(name,gender,age);
+    </script>
+</body>
+</html>

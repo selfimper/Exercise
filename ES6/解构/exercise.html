@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+ * Programming Quiz: Destructuring Arrays (1-3)
+ *
+ * Use destructuring to initialize the variables `one`, `two`, and `three`
+ * with the colors from the `things` array.
+ */
+ //使用数组解构从 things 数组中获取三个颜色，并将它们存储在变量 one、two 和 three 中
+
+    const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
+// const one = things;
+// const two = '';
+// const three = '';
+
+    const [one, , ,two, , , ,three, ] = things;
+
+    const colors = `List of Colors
+    1. ${one}
+    2. ${two}
+    3. ${three}`;
+
+    console.log(colors);
+    </script>
+</body>
+</html>
