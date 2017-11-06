@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //剩余参数可以将多个元素绑定到一个数组中,剩余参数也用三个连续的点 ( ... ) 表示
+        // const order = [20, 18, 1, "cheese","eggs","milk"];
+        // const [total, subtotal, tax, ...items] = order;//数组中剩余的值（作为数组）被分配给了 items
+        // console.log(total, subtotal,tax,items);
+
+        //可变参数函数
+        //剩余参数的另一个用例是处理可变参数函数。可变参数函数是接受不定数量参数的函数
+
+        function average(...nums){
+            let total = 0;
+            for(const num of nums){
+                total +=num;
+            }
+            return total /nums.length;
+        }
+        console.log(average(2, 6));
+        console.log(average(2, 3, 3, 5, 7, 10));
+        console.log(average(7, 1432, 12, 13, 100));
+        console.log(average());
+    </script>
+</body>
+</html>

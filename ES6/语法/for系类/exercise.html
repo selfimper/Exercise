@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 编写符合以下条件的 for...of 循环：
+// 1.循环访问 days 数组中的每一天
+// 2.将一天的首字母大写
+// 3.将这一天输出到控制台中
+
+// 代码应该将以下每天输出到控制台中：
+// Sunday
+// Monday
+// Tuesday
+// Wednesday
+// Thursday
+// Friday
+// Saturday
+
+        const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        function upperCase(str) { 
+            // JavaScript正则匹配  ( |^)[a-z]/g —— 匹配出整个字符串最开始的首字母以及以空格分隔的每个单词的首字母.
+            // 使用replace()方法进行首字母大写化替换.
+            // =>箭头符号：示例    
+            // 转码前 input.map(item => item + 1); 
+            // 转码后 input.map(function (item) { 
+            //          return item + 1;
+            //        });
+            return str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+            }
+            for(const day of days){
+                console.log(upperCase(day));
+            }
+    </script>
+</body>
+</html>

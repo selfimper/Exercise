@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for循环 缺点：需要跟踪计数器和退出条件
+        // const digits = [0,1,2,3,4,5,6,7,8,9];
+        // for(let i = 0; i<digits.length; i++){
+        //     alert(digits[i]);
+        // }
+
+
+        //for...in 循环 缺点：for...in 循环循环访问所有可枚举的属性，意味着如果向数组的原型中添加任何其他属性，这些属性也会出现在循环中
+        // Array.prototype.decimalfy = function() {
+        //     for (let i = 0; i < this.length; i++) {
+        //         this[i] = this[i].toFixed(2);
+        //     }
+        // };
+        // const digits = [0,1,2,3,4,5,6,7,8,9];
+        // for (const index in digits){ //使用index来访问数组的值
+        //     alert(digits[index]);
+        // }
+
+
+        //for..of 循环用于循环访问任何可迭代的数据类型。  /可以忽略索引  /for...of 循环只循环访问对象中的值。
+        const digits = [0,1,2,3,4,5,6,7,8,9];
+        for(const digit of digits){ //建议使用复数对象名称来表示多个值的集合。这样，循环该集合时，可以使用名称的单数版本来表示集合中的单个值.
+            alert(digit);
+        }
+
+    </script>
+</body>
+</html>
