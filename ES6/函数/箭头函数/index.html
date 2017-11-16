@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //用普通函数将每个名字转换为大写形式
+        // const upperCaseNames = ["Frank","Asser","Kagure"].map(function(){
+        //     return name.toUpperCase();
+        // });
+        //使用箭头函数
+        const upperCaseNames = ["Frank","Asser","kagure"].map(
+            name =>name.toUpperCase()
+        );
+
+        //圆括号和箭头函数参数
+        //如果列表中有两个或多个参数，或者零个，则需要将参数列表放在圆括号内
+        //empty parameter
+        const sayHi = () =>console.log("hello,world.");
+        sayHi();
+
+        //multiple parameter
+        const orderIceCream = (flavor,cone) => console.log(`"Here is your ${flavor} ice cream in a ${cone} cone."`);
+        orderIceCream("chocolate","waffle");
+
+        //简写主体语法和常规主体语法
+
+        //只有一个表达式作为函数主体：(简写主体语法) 在函数主体周围没有花括号，自动返回表达式
+        const upperCaseNames = ["Frank","Asser","kagure"].map(
+            name =>name.toUpperCase()
+        );
+        
+        //箭头函数的主体内需要多行代码：(常规主体语法) 将函数主体放在花括号内，需要使用return语句来返回内容
+        const uppizedName = ["Frank","Asser","kagure"].map(name =>{
+            name = name.toUpperCase();
+            return `${name} has ${name.length} characters in their name`;
+        });
+    </script>
+</body>
+</html>
